@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evaluación intermedia M2 - Alba Vidal</title>
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -17,14 +17,14 @@
 
     <form action="#" class="form">
 
-      <label for="guessnumber">Introduce aquí tu número:</label>
+      <label for="guessnumber" class="form__label">Introduce aquí tu número:</label>
 
-      <input type="number" name="guessnumber" id="guessnumber" class="input js-input" placeholder="Tú número" min="1" max="100">
+      <input type="number" name="guessnumber" id="guessnumber" class="form__input js-input" placeholder="Tú número">
 
-      <input class="button js-button" type="button" value="Prueba">
+      <input class="form__button js-button" type="button" value="Prueba">
 
-      <input type="text" class="clue" value="Escribe un número y dale a Prueba.">
-      <input type="text" class="js-counter" value="Número de intentos">
+      <p class="form__message js-clue">Escribe un número y dale a Prueba.</p>
+      <p class="form__message js-counter">Número de intentos: 0</p>
 
     </form>
 
