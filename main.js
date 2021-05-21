@@ -11,6 +11,7 @@ console.log("Número random:", randomNumber);
 const button = document.querySelector(".js-button");
 const clue = document.querySelector(".js-clue");
 const userNumber = document.querySelector(".js-input");
+const background = document.querySelector(".js-page");
 
 const compare = () => {
   const userNumber2 = userNumber.value;
@@ -18,12 +19,17 @@ const compare = () => {
   console.log(`Número de la usuaria: ${userNumberValue}`);
   if (userNumberValue === randomNumber) {
     clue.innerHTML = "Has ganado campeona!!!";
+    clue.style.color = "green";
+    background.style.backgroundColor = "#e7ecf2";
   } else if (userNumber2 < 1 || userNumber2 > 100) {
     clue.innerHTML = `El número debe estar entre 1 y 100.`;
+    clue.style.color = "#7e113d";
   } else if (userNumber2 < randomNumber) {
     clue.innerHTML = "Demasiado bajo";
+    clue.style.color = "red";
   } else if (userNumber2 > randomNumber) {
     clue.innerHTML = "Demasiado alto";
+    clue.style.color = "red";
   }
 };
 button.addEventListener("click", compare);
